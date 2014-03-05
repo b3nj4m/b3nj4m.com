@@ -1,0 +1,35 @@
+{
+  "name": "b3nj4m.com",
+  "version": "0.0.1",
+  "description": "personal website of b3nj4m",
+  "main": "build/index.html",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/b3nj4m/b3nj4m.com"
+  },
+  "keywords": [
+    "b3nj4m"
+  ],
+  "author": "Ben Robbins",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/b3nj4m/b3nj4m.com/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.5",
+    "gulp-less": "~1.2.2",
+    "underscore": "~1.6.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-template": "~0.1.1",
+    "gulp-util": "~2.2.14",
+    "connect": "~2.13.1",
+    "gulp-rev": "~0.2.1",
+    "glob": "~3.2.9",
+    "gulp-replace": "~0.2.0",
+    "gulp-filter": "~0.3.1",
+    "gulp-clean": "~0.2.4"
+  }
+}
