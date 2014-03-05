@@ -10,6 +10,7 @@ var filter = require('gulp-filter');
 var replace = require('gulp-replace');
 var concat = require('gulp-concat');
 var template = require('gulp-template');
+var autoprefixer = require('gulp-autoprefixer');
 var http = require('http');
 var connect = require('connect');
 
@@ -24,6 +25,7 @@ gulp.task('styles', ['clean'], function() {
   return gulp.src('dev/css/**/*')
     .pipe(less())
     .pipe(concat('index.css'))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(rev())
     .pipe(gulp.dest('build'))
 });
@@ -77,9 +79,9 @@ gulp.task('serve', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('dev/css/**/*', ['styles']);
-  gulp.watch('dev/templates/**/*', ['html']);
-  gulp.watch('static/**/*', ['static']);
+  gulp.watch('dev/css/**/*', ['build']);
+  gulp.watch('dev/templates/**/*', ['build']);
+  gulp.watch('static/**/*', ['build']);
 
   gutil.log('watching...');
 });
