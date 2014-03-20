@@ -1,3 +1,13 @@
 {
-  "beans": "cheese"
+  "width": 800,
+  "minWidth": 300,
+  "widthStep": 10,
+  "headerSize": 68,
+  "minHeaderSize": 31,
+  "subHeaderSize": 32,
+  "minSubHeaderSize": 15,
+  "headerSpacing": 32,
+  "minHeaderSpacing": 5.5,
+  "subHeaderSpacing": 28,
+  "minSubHeaderSpacing": 6.5
 }

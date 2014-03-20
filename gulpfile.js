@@ -1,3 +1,4 @@
+var _ = require('underscore');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var rev = require('gulp-rev');
@@ -30,8 +31,44 @@ gulp.task('styles', ['clean'], function() {
     .pipe(gulp.dest('build'))
 });
 
+//generate data used for header, sub-header media queries
+generateTmplData = function(data) {
+  var widths = _.range(data.width, data.minWidth, -data.widthStep);
+  var steps = [];
+
+  var headerSize = data.headerSize;
+  var subHeaderSize = data.subHeaderSize;
+  var headerSpacing = data.headerSpacing;
+  var subHeaderSpacing = data.subHeaderSpacing;
+
+  var headerSizeStep = (data.headerSize - data.minHeaderSize) / widths.length;
+  var subHeaderSizeStep = (data.subHeaderSize - data.minSubHeaderSize) / widths.length;
+  var headerSpacingStep = (data.headerSpacing - data.minHeaderSpacing) / widths.length;
+  var subHeaderSpacingStep = (data.subHeaderSpacing - data.minSubHeaderSpacing) / widths.length;
+
+  _.each(widths, function(width, idx) {
+    steps.push({
+      width: width,
+      headerSize: headerSize,
+      subHeaderSize: subHeaderSize,
+      headerSpacing: headerSpacing,
+      subHeaderSpacing: subHeaderSpacing
+    });
+
+    headerSize -= headerSizeStep;
+    subHeaderSize -= subHeaderSizeStep;
+    headerSpacing -= headerSpacingStep;
+    subHeaderSpacing -= subHeaderSpacingStep;
+  });
+
+  data.steps = steps;
+
+  return data;
+};
+
 gulp.task('html', ['clean'], function() {
   var tmplData = JSON.parse(fs.readFileSync('dev/json/index.json'));
+  tmplData = generateTmplData(tmplData);
 
   return gulp.src('dev/templates/**/*')
     .pipe(template(tmplData))
@@ -81,6 +118,7 @@ gulp.task('serve', function() {
 gulp.task('watch', function() {
   gulp.watch('dev/css/**/*', ['build']);
   gulp.watch('dev/templates/**/*', ['build']);
+  gulp.watch('dev/json/**/*', ['build']);
   gulp.watch('static/**/*', ['build']);
 
   gutil.log('watching...');

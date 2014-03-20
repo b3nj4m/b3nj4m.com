@@ -3,6 +3,31 @@
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <link rel="stylesheet" href="/index.css" type="text/css" />
+  <style>
+    .main-content .header {
+      font-size: <%- headerSize %>px;
+      letter-spacing: <%- headerSpacing %>px;
+    }
+
+    .main-content .sub-header {
+      font-size: <%- subHeaderSize %>px;
+      letter-spacing: <%- subHeaderSpacing %>px;
+    }
+
+    <% _.each(steps, function(step) { %>
+      @media screen and (max-width: <%- step.width %>px) {
+        .main-content .header {
+          font-size: <%- step.headerSize %>px;
+          letter-spacing: <%- step.headerSpacing %>px;
+        }
+
+        .main-content .sub-header {
+          font-size: <%- step.subHeaderSize %>px;
+          letter-spacing: <%- step.subHeaderSpacing %>px;
+        }
+      }
+    <% }); %>
+  </style>
 </head>
 <body>
   <div class="main-content">
@@ -15,7 +40,7 @@
         <a href="https://github.com/b3nj4m"><i class="fa fa-github"></i> b3nj4m on Github</a>
         <a href="https://careers.stackoverflow.com/b3nj4m"><i class="fa fa-stack-overflow"></i> b3nj4m on Stackoverflow Careers</a>
         <a href="https://flickr.com/photos/b3nj4m"><i class="fa fa-flickr"></i> b3nj4m on Flickr</a>
-        <a href="/pgp_pubkey.txt"><i class="fa fa-envelope"></i> PGP public key</a>
+        <a href="/pgp_pubkey.txt"><i class="fa fa-envelope-o"></i> PGP public key</a>
       </div>
       <div class="column">
         <a href="https://b3nj4m.github.io/youtube-events/"><i class="fa fa-github"></i> youtube-events.js on Github</a>
