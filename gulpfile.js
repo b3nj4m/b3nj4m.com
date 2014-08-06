@@ -14,6 +14,7 @@ var template = require('gulp-template');
 var autoprefixer = require('gulp-autoprefixer');
 var http = require('http');
 var connect = require('connect');
+var shell = require('gulp-shell');
 
 var port = gutil.env.port || 8080;
 
@@ -123,6 +124,10 @@ gulp.task('watch', function() {
 
   gutil.log('watching...');
 });
+
+gulp.task('deploy', ['build'], shell.task([
+  'scp -r build/* b3nj4m@b3nj4m.com:~/b3nj4m.com/'
+]));
 
 gulp.task('build', ['clean', 'styles', 'html', 'static', 'replace-urls']);
 gulp.task('dev', ['build', 'serve', 'watch']);
