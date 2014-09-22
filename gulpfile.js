@@ -77,8 +77,11 @@ gulp.task('html', ['clean'], function() {
 });
 
 gulp.task('static', ['clean'], function() {
+  var keybaseFilter = filter('!keybase.txt');
   return gulp.src('static/**/*')
+    .pipe(keybaseFilter)
     .pipe(rev())
+    .pipe(keybaseFilter.restore())
     .pipe(gulp.dest('build'));
 });
 
