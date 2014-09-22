@@ -1,0 +1,61 @@
+==================================================================
+https://keybase.io/b3nj4m
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://b3nj4m.com
+  * I am b3nj4m (https://keybase.io/b3nj4m) on keybase.
+  * I have a public key with fingerprint D7A5 D326 8341 4A08 BA72  2718 AD8D 23B7 9FA8 50DC
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "d7a5d32683414a08ba722718ad8d23b79fa850dc",
+            "host": "keybase.io",
+            "key_id": "ad8d23b79fa850dc",
+            "uid": "4fee96bde4829385375255d5b765c000",
+            "username": "b3nj4m"
+        },
+        "service": {
+            "hostname": "b3nj4m.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1411427369,
+    "expire_in": 157680000,
+    "prev": "2981f76890fa96ef879a0fd8073556d8920f59a446a3069c8b639f6d09d83647",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.0.5
+Comment: https://keybase.io/crypto
+
+yMEHAnicbZG/axRBFMfXqIEcCKayEZTRRjji7M7vrQI2limsDvSY2Zm5jOZ2Nrt7
+Z0IIMSBYCaYKiihioYXaSSAWigYbC7Gws5SQxn9AhHMmaCFYDfN9n+/3vcfbO3E0
+6cy+vHtu5/HzhW9HPr37MUqunH1xYQ0or1dBvgZumMPHunJg6qp2ZQtyoJkkGmWU
+I5xiCbmSLMtYyqXmOkOKCSs5gboAXbDom+gIMUo2Zs75oIVP3+mg/ocfHRawNUZQ
+pQ3mmUCcIEYyQjRRjJICQhjBxtSlHJpAK1Rex0Ow3gVBG7vCxIlj43/qc4UfBl9V
++9YXfinoi21b5dHWrlaRu2lU/09CX7lSh52DYWzqxvkS5Gkgi9bFyBSnKc4YoqIL
+zErlatN3kSCM8jAejG3MOERmgqc2iAJaKaixnAkJreaQIUKo5iKDlgiJMZUIUlFw
+RZGwVEOhOaKYgbjTculBTsKYchAiGzcoZTuqDVh/f+1YMttJpo9PxaMlnZmTf0/5
+6GsyuXz+2fSriyv34dbm6atv7kwe7r++tPzgs/q13ZtHt8/sJpPeVG/nqZv5/uHW
+lyU23t/drA/efjzY4/rek1Po5/bGb6iTs8A=
+=BE7d
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/b3nj4m
+
+==================================================================
+
