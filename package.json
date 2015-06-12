@@ -19,19 +19,23 @@
     "url": "https://github.com/b3nj4m/b3nj4m.com/issues"
   },
   "devDependencies": {
+    "connect": "~2.13.1",
+    "glob": "~3.2.9",
     "gulp": "~3.5.5",
-    "gulp-less": "~1.2.2",
-    "underscore": "~1.6.0",
+    "gulp-autoprefixer": "0.0.6",
     "gulp-concat": "~2.1.7",
+    "gulp-filter": "~0.3.1",
+    "gulp-less": "~1.2.2",
+    "gulp-replace": "~0.2.0",
+    "gulp-rev": "~0.2.1",
+    "gulp-shell": "^0.4.2",
     "gulp-template": "~0.1.1",
     "gulp-util": "~2.2.14",
-    "connect": "~2.13.1",
-    "gulp-rev": "~0.2.1",
-    "glob": "~3.2.9",
-    "gulp-replace": "~0.2.0",
-    "gulp-filter": "~0.3.1",
-    "gulp-clean": "~0.2.4",
-    "gulp-autoprefixer": "0.0.6",
-    "gulp-shell": "~0.2.9"
+    "rimraf": "^2.4.0",
+    "underscore": "~1.6.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rimraf": "^0.1.1"
   }
 }

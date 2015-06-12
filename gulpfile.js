@@ -6,7 +6,7 @@ var glob = require('glob');
 var fs = require('fs');
 var path = require('path');
 var less = require('gulp-less');
-var clean = require('gulp-clean');
+var clean = require('rimraf');
 var filter = require('gulp-filter');
 var replace = require('gulp-replace');
 var concat = require('gulp-concat');
@@ -18,9 +18,8 @@ var shell = require('gulp-shell');
 
 var port = gutil.env.port || 8080;
 
-gulp.task('clean', function() {
-  return gulp.src('build/**/*')
-    .pipe(clean());
+gulp.task('clean', function(done) {
+  clean('build', done);
 });
 
 gulp.task('styles', ['clean'], function() {
