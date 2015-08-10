@@ -1,13 +1,42 @@
 {
-  "width": 800,
-  "minWidth": 300,
-  "widthStep": 10,
-  "headerSize": 68,
-  "minHeaderSize": 31,
-  "subHeaderSize": 32,
-  "minSubHeaderSize": 15,
-  "headerSpacing": 32,
-  "minHeaderSpacing": 5.5,
-  "subHeaderSpacing": 28,
-  "minSubHeaderSpacing": 6.5
+  "links": {
+    "social": {
+      "title": "Social",
+      "icon": "user",
+      "text": "Connect with Ben.",
+      "links": [
+        {"url": "https://twitter.com/b3nj4m", "icon": "twitter", "text": "@b3nj4m"},
+        {"url": "https://flickr.com/photos/b3nj4m", "icon": "flickr", "text": "Flickr"},
+        {"url": "https://last.fm/user/b3nj4m", "icon": "lastfm-square", "text": "Last.fm"}
+      ]
+    },
+    "code": {
+      "title": "Code",
+      "icon": "code",
+      "text": "Code with Ben.",
+      "links": [
+        {"url": "https://github.com/b3nj4m", "icon": "github", "text": "Github"},
+        {"url": "https://www.npmjs.org/~b3nj4m", "icon": "cube", "text": "npm"},
+        {"url": "https://stackoverflow.com/users/348314/ben", "icon": "stack-overflow", "text": "Stack Overflow"}
+      ]
+    },
+    "work": {
+      "title": "Work",
+      "icon": "cube",
+      "text": "Work with Ben.",
+      "links": [
+        {"url": "https://careers.stackoverflow.com/b3nj4m", "icon": "stack-overflow", "text": "S.O. Careers"}
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "icon": "envelope",
+      "text": "Contact Ben.",
+      "links": [
+        {"url": "mailto:ben.robbins@gmail.com", "icon": "envelope-o", "text": "Email"},
+        {"url": "/pgp_pubkey.txt", "icon": "lock", "title": "PGP public key (fingerprint: D7A5 D326 8341 4A08 BA72  2718 AD8D 23B7 9FA8 50DC)", "text": "PGP public key"},
+        {"url": "https://keybase.io/b3nj4m", "icon": "key", "text": "keybase.io"}
+      ]
+    }
+  }
 }

@@ -2,54 +2,50 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="stylesheet" href="/materialize.css" type="text/css" />
   <link rel="stylesheet" href="/index.css" type="text/css" />
-  <style>
-    .main-content .header {
-      font-size: <%- headerSize %>px;
-      letter-spacing: <%- headerSpacing %>px;
-    }
-
-    .main-content .sub-header {
-      font-size: <%- subHeaderSize %>px;
-      letter-spacing: <%- subHeaderSpacing %>px;
-    }
-
-    <% _.each(steps, function(step) { %>
-      @media screen and (max-width: <%- step.width %>px) {
-        .main-content .header {
-          font-size: <%- step.headerSize %>px;
-          letter-spacing: <%- step.headerSpacing %>px;
-        }
-
-        .main-content .sub-header {
-          font-size: <%- step.subHeaderSize %>px;
-          letter-spacing: <%- step.subHeaderSpacing %>px;
-        }
-      }
-    <% }); %>
-  </style>
 </head>
 <body>
-  <div class="main-content">
-    <h1 class="header">Ben Robbins</h1>
-    <h4 class="sub-header">Software Engineer</h4>
+  <header>
+    <nav class="light-blue">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Ben Robbins</a>
+        <span class="right hide-on-small-only">Software Engineer</span>
+      </div>
+    </nav>
+  </header>
 
-    <div class="row">
-      <div class="column">
-        <a href="https://twitter.com/b3nj4m"><i class="fa fa-twitter"></i> <%- '@' %>b3nj4m</a>
-        <a href="https://flickr.com/photos/b3nj4m"><i class="fa fa-flickr"></i> b3nj4m on Flickr</a>
-        <a href="https://last.fm/user/b3nj4m"><i class="fa fa-lastfm-square"></i> b3nj4m on Last.fm</a>
-        <a href="mailto:ben.robbins<%- '@' %>gmail.com"><i class="fa fa-envelope-o"></i> ben.robbins<%- '@' %>gmail.com</a>
-        <a href="/pgp_pubkey.txt" title="PGP public key (fingerprint: D7A5 D326 8341 4A08 BA72  2718 AD8D 23B7 9FA8 50DC)"><i class="fa fa-lock"></i> PGP public key</a>
-        <a href="https://keybase.io/b3nj4m"><i class="fa fa-key"></i> b3nj4m on keybase.io</a>
-      </div>
-      <div class="column">
-        <a href="https://github.com/b3nj4m"><i class="fa fa-github"></i> b3nj4m on Github</a>
-        <a href="https://www.npmjs.org/~b3nj4m"><i class="fa fa-cube"></i> b3nj4m on npm</a>
-        <a href="https://stackoverflow.com/users/348314/ben"><i class="fa fa-stack-overflow"></i> b3nj4m on Stackoverflow</a>
-        <a href="https://careers.stackoverflow.com/b3nj4m"><i class="fa fa-stack-overflow"></i> b3nj4m on Stackoverflow Careers</a>
-      </div>
+  <main>
+    <div class="main-content flow-text z-depth-1 waves-effect waves-dark">
+      <% var i = 0 %>
+      <% _.each(links, function (category) { %>
+        <% if (i % 2 === 0) { %>
+          <div class="row">
+        <% } %>
+        <div class="col s12 m6">
+          <div class="card hoverable blue-grey darken-1 z-depth-1">
+            <div class="card-content white-text">
+              <span class="card-title"><% if (category.icon) { %><i class="fa fa-<%- category.icon %>"></i> <% } %><%- category.title %></span>
+              <p><%- category.text %></p>
+              <% _.each(category.links, function (link) { %>
+                <a class="waves-effect waves-light btn blue-grey lighten-1 hide-on-large-only mobile-link" href="<%- link.url %>"><% if (link.icon) { %><i class="fa fa-<%- link.icon %>"></i><% } %> <%- link.text %></a>
+              <% }) %>
+            </div>
+            <div class="card-action truncate hide-on-med-and-down">
+              <% _.each(category.links, function (link) { %>
+                <a <% if (link.title) { %>title="<%- link.title %>"<% } %> href="<%- link.url %>"><% if (link.icon) { %><i class="fa fa-<%- link.icon %>"></i> <% } %><%- link.text %></a>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+        <% if (i % 2 === 1) { %>
+          </div>
+        <% } %>
+        <% i++ %>
+      <% }) %>
     </div>
-  </div>
+  </main>
+  <script type="text/javascript" src="/jquery.min.js"></script>
+  <script type="text/javascript" src="/materialize.js"></script>
 </body>
 </html>
