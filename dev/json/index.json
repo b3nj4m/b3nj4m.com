@@ -25,7 +25,7 @@
       "icon": "building",
       "text": "Work with Ben.",
       "links": [
-        {"url": "https://careers.stackoverflow.com/b3nj4m", "icon": "stack-overflow", "text": "S.O. Careers"}
+        {"url": "https://stackoverflow.com/cv/b3nj4m", "icon": "stack-overflow", "text": "S.O. Jobs"}
       ]
     },
     "contact": {
