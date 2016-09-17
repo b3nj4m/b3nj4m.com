@@ -16,8 +16,9 @@
       "text": "Code with Ben.",
       "links": [
         {"url": "https://github.com/b3nj4m", "icon": "github", "text": "Github"},
-        {"url": "https://www.npmjs.org/~b3nj4m", "icon": "cube", "text": "npm"},
-        {"url": "https://stackoverflow.com/users/348314/ben", "icon": "stack-overflow", "text": "Stack Overflow"}
+        {"url": "https://www.npmjs.com/~b3nj4m", "icon": "cube", "text": "npm"},
+        {"url": "https://stackoverflow.com/users/348314/ben", "icon": "stack-overflow", "text": "Stack Overflow"},
+        {"url": "https://www.kaggle.com/b3nj4m", "icon": "pie-chart", "text": "Kaggle"}
       ]
     },
     "work": {
@@ -25,7 +26,7 @@
       "icon": "building",
       "text": "Work with Ben.",
       "links": [
-        {"url": "https://stackoverflow.com/cv/b3nj4m", "icon": "stack-overflow", "text": "S.O. Jobs"}
+        {"url": "https://stackoverflow.com/cv/b3nj4m", "icon": "stack-overflow", "mobileText": "S.O. Jobs", "text": "Stack Overflow Jobs"}
       ]
     },
     "contact": {

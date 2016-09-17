@@ -4,10 +4,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <link rel="stylesheet" href="/materialize.css" type="text/css" />
   <link rel="stylesheet" href="/index.css" type="text/css" />
+  <title>Ben Robbins -- Software Engineer</title>
 </head>
 <body>
   <header>
-    <nav class="light-blue">
+    <nav class="blue-grey">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Ben Robbins</a>
         <span class="right hide-on-small-only">Software Engineer</span>
@@ -16,24 +17,33 @@
   </header>
 
   <main>
-    <div class="main-content flow-text z-depth-1 waves-effect waves-dark">
+    <div class="main-content flow-text z-depth-1 waves-effect waves-dark blue-grey lighten-5">
       <% var i = 0 %>
       <% _.each(links, function (category) { %>
         <% if (i % 2 === 0) { %>
           <div class="row">
         <% } %>
         <div class="col s12 m6">
-          <div class="card hoverable blue-grey darken-1 z-depth-1">
-            <div class="card-content white-text">
-              <span class="card-title"><% if (category.icon) { %><i class="fa fa-<%- category.icon %>"></i> <% } %><%- category.title %></span>
-              <p><%- category.text %></p>
+          <div class="card hoverable horizontal z-depth-1">
+            <div class="card-content">
+              <span class="card-title">
+                <% if (category.icon) { %>
+                  <i class="fa fa-<%- category.icon %>"></i>
+                <% } %>
+                <%- category.title %>
+              </span>
               <% _.each(category.links, function (link) { %>
-                <a class="waves-effect waves-light btn blue-grey lighten-1 hide-on-large-only mobile-link" href="<%- link.url %>"><% if (link.icon) { %><i class="fa fa-<%- link.icon %>"></i><% } %> <%- link.text %></a>
-              <% }) %>
-            </div>
-            <div class="card-action truncate hide-on-med-and-down">
-              <% _.each(category.links, function (link) { %>
-                <a <% if (link.title) { %>title="<%- link.title %>"<% } %> href="<%- link.url %>"><% if (link.icon) { %><i class="fa fa-<%- link.icon %>"></i> <% } %><%- link.text %></a>
+                <a class="waves-effect waves-light btn mobile-link" href="<%- link.url %>">
+                  <% if (link.icon) { %>
+                    <i class="fa fa-<%- link.icon %>"></i>
+                  <% } %>
+                  <% if (link.mobileText) { %>
+                    <span class="hide-on-large-only"><%- link.mobileText %></span>
+                    <span class="hide-on-med-and-down"><%- link.text %></span>
+                  <% } else { %>
+                    <%- link.text %>
+                  <% } %>
+                </a>
               <% }) %>
             </div>
           </div>
