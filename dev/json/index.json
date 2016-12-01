@@ -7,7 +7,7 @@
       "links": [
         {"url": "https://twitter.com/b3nj4m", "icon": "twitter", "text": "@b3nj4m"},
         {"url": "https://flickr.com/photos/b3nj4m", "icon": "flickr", "text": "Flickr"},
-        {"url": "https://last.fm/user/b3nj4m", "icon": "lastfm-square", "text": "Last.fm"}
+        {"url": "http://last.fm/user/b3nj4m", "icon": "lastfm-square", "text": "Last.fm"}
       ]
     },
     "code": {
